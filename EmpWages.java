@@ -17,6 +17,13 @@ public class EmpWages {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("Welcome to Employe wages computation");
+        int Full_time=1;
+         double empCheck=Math.floor((Math.random()*10)%2);
+         if (Full_time==empCheck){
+             System.out.println("Employee is  present");
+         }
+         else
+             System.out.println("Employee is absent");
     
 }
 }
