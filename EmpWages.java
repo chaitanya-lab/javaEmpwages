@@ -21,29 +21,32 @@ public class EmpWages {
         int Part_Time=2;
         int Wage_per_hr=20;
         int Working_day_permonth=20;
-        int working_hr_perday=8;
-        int working_parttime=8;
-         int empCheck=(int)Math.floor((Math.random()*10)%3);
-         switch(empCheck){
-             case 1:          
-             System.out.println("Employee is  present");
-            int Total_wageper_day=( Wage_per_hr*working_hr_perday);
-            int MonthlyWages=(Total_wageper_day*Working_day_permonth);
-            System.out.println(Total_wageper_day);
-            System.out.println(MonthlyWages);
-            break;
-             case 2:
-             System.out.println("Employee is working parttime");
-             int Total_part_timewage=(Wage_per_hr*working_parttime);
-             int MonthlyWagesparttime=(Total_part_timewage*Working_day_permonth);
-             System.out.println(Total_part_timewage);
-              System.out.println(MonthlyWagesparttime);
-             break;
-             default:
-             System.out.println("Employee is absent");
-    
-         }
+        int maxHrsInmonth=100;
+        int TotalempHr=0;
+        int TotalWorkingDay=0;
+        int empHrs=0;
+        while( TotalempHr <= maxHrsInmonth && TotalWorkingDay <= Working_day_permonth ){
+            TotalWorkingDay++;
+       int empCheck=(int)Math.floor((Math.random()*10)%3);
+        switch(empCheck){
+                case 1:
+                                         empHrs=8;
+                                break;
+                case 2:
+                                 empHrs=8;
+                                break;
+
+                default:
+                               empHrs=0;
+                               break;
+
+        }
+TotalempHr=(TotalempHr+empHrs);
+        }
+ int salary=(TotalempHr*Wage_per_hr);
+
+System.out.println("totoal salary :" +salary);
          
-         }
-    
+         
+    }
 }
