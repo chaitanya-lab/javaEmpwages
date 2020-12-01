@@ -30,10 +30,10 @@ public class EmpWages {
        int empCheck=(int)Math.floor((Math.random()*10)%3);
         switch(empCheck){
                 case 1:
-                                         empHrs=8;
+                                empHrs=8;
                                 break;
                 case 2:
-                                 empHrs=8;
+                                empHrs=8;
                                 break;
 
                 default:
@@ -42,8 +42,8 @@ public class EmpWages {
 
         }
 TotalempHr=(TotalempHr+empHrs);
-        }
- int salary=(TotalempHr*Wage_per_hr);
+    }
+int salary=(TotalempHr*Wage_per_hr);
 
 System.out.println("totoal salary :" +salary);
          
